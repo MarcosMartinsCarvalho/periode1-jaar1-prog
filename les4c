@@ -1,0 +1,24 @@
+
+
+
+ var readlineSync = require('readline-sync');
+
+ var jaar = readlineSync.question('Welk jaar ben je geboren? ');
+
+ var maand = readlineSync.question('welk maand?');
+
+ var dag = readlineSync.question('welk dag?');
+
+function leeftijd (jaar, maand, dag)
+{
+let now = new Date();
+let birth = new Date(jaar, maand, dag); 
+let miliseconds = now - birth;
+
+return miliseconds/1000 /60/60/24/365
+}
+
+console.log(leeftijd(jaar, maand, dag))
+
+
+
